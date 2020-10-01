@@ -1,12 +1,15 @@
-import React, { useState } from 'react';
+import React, {
+  useState
+} from 'react';
 
 // eslint-disable-next-line
 import Modal from '../Modal';
 
-const PhotoList = ({ category }) => {
+const PhotoList = ({
+  category
+}) => {
 
-  const [photos] = useState([
-    {
+  const [photos] = useState([{
       name: 'Grocery aisle',
       category: 'commercial',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie',
@@ -105,19 +108,26 @@ const PhotoList = ({ category }) => {
 
   const currentPhotos = photos.filter((photo) => photo.category === category);
 
-  return (
-    <div>
-      <div className="flex-row">
-        {currentPhotos.map((image, i) => (
-          <img
-            src={require(`../../assets/small/${category}/${i}.jpg`)}
-            alt={image.name}
-            className="img-thumbnail mx-1"
-            key={image.name}
-          />
-        ))}
-      </div>
-    </div>
+  return ( <
+    div >
+    <
+    div className = "flex-row" > {
+      currentPhotos.map((image, i) => ( <
+        img src = {
+          require(`../../assets/small/${category}/${i}.jpg`)
+        }
+        alt = {
+          image.name
+        }
+        className = "img-thumbnail mx-1"
+        key = {
+          image.name
+        }
+        />
+      ))
+    } <
+    /div> <
+    /div>
   );
 };
 
